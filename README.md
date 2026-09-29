@@ -1,5 +1,8 @@
 # Field Index — UAP Archive Investigation Prototype
 
+- Playable prototype: https://l3279920.github.io/uap-prototype/prototype/
+- Screenshot gallery: https://l3279920.github.io/uap-prototype/prototype_screenshots/index.html
+
 A dependency-free static reference prototype for a public-record narrative investigation game, built independently from the approved task materials and source files in `UAP档案调查游戏体验设计-20260924`.
 
 ## Open locally
