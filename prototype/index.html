@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#16221f">
+  <title>Field Index — UAP Archive Investigation</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to investigation</a>
+  <header class="topbar">
+    <button class="brand" data-testid="home-button" aria-label="Return to case index"><span class="brand-mark">FI</span><span><b>FIELD INDEX</b><small>PUBLIC RECORDS DESK</small></span></button>
+    <div class="statusline" aria-live="polite"><span class="pulse"></span><span id="statusText">Desk ready</span></div>
+    <button class="icon-button" data-testid="desk-menu" aria-expanded="false" aria-controls="deskPanel">Desk</button>
+  </header>
+  <div class="shell">
+    <nav class="rail" aria-label="Primary">
+      <button data-view="index" class="rail-button active"><span>01</span>Cases</button>
+      <button data-view="release" class="rail-button" data-testid="release-nav"><span>02</span>Incoming</button>
+      <button data-view="methods" class="rail-button"><span>03</span>Methods</button>
+    </nav>
+    <main id="main" tabindex="-1"></main>
+    <aside id="deskPanel" class="desk-panel" aria-label="Investigation desk">
+      <div class="desk-head"><div><small>ACTIVE DESK</small><h2>Working set</h2></div><button class="close-button" data-testid="close-desk" aria-label="Close desk">×</button></div>
+      <div id="deskContent"></div>
+      <div class="desk-actions"><button data-testid="export-state">Export</button><label class="import-label">Import<input data-testid="import-state" type="file" accept="application/json"></label><button class="danger" data-testid="reset-state">Reset</button></div>
+    </aside>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="recordDialog" aria-labelledby="recordTitle"><button class="dialog-close" data-testid="close-record" aria-label="Close record">×</button><div id="recordBody"></div></dialog>
+  <dialog id="resetDialog" aria-labelledby="resetTitle"><div class="confirm"><small>DESK CONTROL</small><h2 id="resetTitle">Clear investigation history?</h2><p>This removes viewed records, comparisons, notes, conclusions, and release decisions from this browser.</p><div><button data-testid="cancel-reset">Keep history</button><button class="danger" data-testid="confirm-reset">Clear desk</button></div></div></dialog>
+  <noscript>This prototype requires JavaScript enabled.</noscript>
+</body>
+</html>
